@@ -1,11 +1,13 @@
 import PropTypes from 'prop-types';
+import { Item, Label, Percentage } from './statsItem.styled';
 
 export const StatsItem = ({ label, percentage }) => {
+  const bgColor = Math.floor(Math.random() * 16777215).toString(16);
   return (
-    <li className="item">
-      <span className="label">{label}</span>
-      <span className="percentage">{percentage}</span>
-    </li>
+    <Item bgColor={bgColor}>
+      <Label>{label}</Label>
+      <Percentage>{percentage}%</Percentage>
+    </Item>
   );
 };
 
