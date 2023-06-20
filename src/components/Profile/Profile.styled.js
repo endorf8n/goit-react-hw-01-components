@@ -1,46 +1,72 @@
 import styled from 'styled-components';
 
 export const ProfileContainer = styled.div`
-  background-color: #b3dcfd;
-  padding: 80px;
-`;
-
-export const Name = styled.p`
-  color: #191551;
-  text-align: center;
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  width: ${({ theme }) => theme.spacing(80)};
+  margin: 20px auto;
+  box-shadow: ${({ theme }) => theme.shadows.regular};
+  border-radius: ${({ theme }) => theme.spacing(4)};
+  background-color: ${({ theme }) => theme.colors.light};
+  overflow: hidden;
 `;
 
 export const UserDescr = styled.div`
-  padding-top: 20px;
-  padding-bottom: 20px;
-  margin-right: auto;
-  margin-left: auto;
-  width: 300px;
-  background-color: #def3f6;
+  text-align: center;
+  padding: ${({ theme }) => theme.spacing(15)};
 `;
 
 export const Avatar = styled.img`
-  display: block;
-  margin-left: auto;
+  width: ${({ theme }) => theme.spacing(30)};
+  height: ${({ theme }) => theme.spacing(30)};
+  background-color: ${({ theme }) => theme.colors.blue};
   margin-right: auto;
-  width: 80px;
-  height: 80px;
-  background-color: #76b6c4;
+  margin-left: auto;
+  margin-bottom: ${({ theme }) => theme.spacing(4)};
   border-radius: 50%;
 `;
 
+export const Name = styled.p`
+  font-size: ${({ theme }) => theme.fontSizes.large};
+  font-weight: bold;
+  color: ${({ theme }) => theme.colors.dark};
+  margin-bottom: ${({ theme }) => theme.spacing(4)};
+`;
+
 export const Tag = styled.p`
-  margin: 0;
-  text-align: center;
-  font-size: 14px;
-  margin-bottom: 8px;
+  font-size: ${({ theme }) => theme.fontSizes.small};
+  color: ${({ theme }) => theme.colors.gray};
 `;
 
 export const Location = styled.p`
-  margin: 0;
+  font-size: ${({ theme }) => theme.spacing(4)};
+  font-weight: 600;
+  color: ${({ theme }) => theme.colors.gray};
+`;
+
+export const List = styled.ul`
+  display: flex;
+  width: ${({ theme }) => theme.spacing(80)};
+  background-color: ${({ theme }) => theme.colors.blue};
+`;
+
+export const ListItem = styled.li`
+  width: ${({ theme }) => theme.spacing(27)};
+  padding-top: ${({ theme }) => theme.spacing(7)};
+  padding-bottom: ${({ theme }) => theme.spacing(7)};
+  box-shadow: inset 0 0 10px ${({ theme }) => theme.colors.gray};
+`;
+
+export const Label = styled.span`
+  display: block;
+  font-size: ${({ theme }) => theme.spacing(3)};
   text-align: center;
-  font-size: 14px;
+  color: ${({ theme }) => theme.colors.dark};
+`;
+export const Quantity = styled.span`
+  display: block;
+  text-align: center;
+  font-size: ${({ theme }) => theme.fontSizes.medium};
+  font-weight: bold;
+  color: ${({ theme }) => theme.colors.violet};
 `;

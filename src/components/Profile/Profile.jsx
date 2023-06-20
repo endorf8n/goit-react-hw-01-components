@@ -6,6 +6,10 @@ import {
   Tag,
   Avatar,
   UserDescr,
+  List,
+  Label,
+  Quantity,
+  ListItem,
 } from './Profile.styled';
 
 export const Profile = ({
@@ -24,20 +28,20 @@ export const Profile = ({
         <Location>{location}</Location>
       </UserDescr>
 
-      <ul className="stats">
-        <li>
-          <span className="label">Followers</span>
-          <span className="quantity">{followers}</span>
-        </li>
-        <li>
-          <span className="label">Views</span>
-          <span className="quantity">{views}</span>
-        </li>
-        <li>
-          <span className="label">Likes</span>
-          <span className="quantity">{likes}</span>
-        </li>
-      </ul>
+      <List>
+        <ListItem>
+          <Label>Followers</Label>
+          <Quantity className="quantity">{followers}</Quantity>
+        </ListItem>
+        <ListItem>
+          <Label>Views</Label>
+          <Quantity className="quantity">{views}</Quantity>
+        </ListItem>
+        <ListItem>
+          <Label>Likes</Label>
+          <Quantity className="quantity">{likes}</Quantity>
+        </ListItem>
+      </List>
     </ProfileContainer>
   );
 };
