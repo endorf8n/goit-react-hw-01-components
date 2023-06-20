@@ -1,12 +1,18 @@
 import styled from 'styled-components';
 
-export const ProfileContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: ${({ theme }) => theme.spacing(80)};
-  margin: 20px auto;
-  box-shadow: ${({ theme }) => theme.shadows.regular};
-  border-radius: ${({ theme }) => theme.spacing(4)};
-  background-color: ${({ theme }) => theme.colors.light};
-  overflow: hidden;
+export const TransactionContainer = styled.table`
+  table-layout: fixed;
+  width: ${({ theme }) => theme.spacing(200)};
+  border-collapse: collapse;
+  border: 3px solid ${({ theme }) => theme.colors.violet};
+  margin-left: auto;
+  margin-right: auto;
+`;
+
+export const TitleHead = styled.th`
+  padding: ${({ theme }) => theme.spacing(5)};
+  background-color: ${({ theme }) => theme.colors.blue};
+  border: 2px solid ${({ theme }) => theme.colors.light};
+  color: ${({ theme }) => theme.colors.white};
+  text-transform: uppercase;
 `;

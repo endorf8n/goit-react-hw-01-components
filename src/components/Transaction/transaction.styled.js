@@ -1,12 +1,24 @@
 import styled from 'styled-components';
 
-export const ProfileContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: ${({ theme }) => theme.spacing(80)};
-  margin: 20px auto;
-  box-shadow: ${({ theme }) => theme.shadows.regular};
-  border-radius: ${({ theme }) => theme.spacing(4)};
-  background-color: ${({ theme }) => theme.colors.light};
-  overflow: hidden;
+export const StyledTransaction = styled.tr`
+  background-color: ${({ index }) => (index % 2 ? 'lightgray' : 'white')};
+  border: 2px solid ${({ theme }) => theme.colors.light};
+  color: ${({ theme }) => theme.colors.dark};
+  text-align: center;
+`;
+
+export const TransactionType = styled.td`
+  text-transform: capitalize;
+  padding: ${({ theme }) => theme.spacing(4)};
+  border: 2px solid ${({ theme }) => theme.colors.light};
+`;
+
+export const TransactionAmount = styled.td`
+  padding: ${({ theme }) => theme.spacing(4)};
+  border: 2px solid ${({ theme }) => theme.colors.light};
+`;
+
+export const TransactionCurrency = styled.td`
+  padding: ${({ theme }) => theme.spacing(4)};
+  border: 2px solid ${({ theme }) => theme.colors.light};
 `;
